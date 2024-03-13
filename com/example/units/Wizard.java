@@ -7,7 +7,10 @@ public class Wizard extends Person{
     private int attackPrice;
 
     public Wizard(String name, int age){
-        super(name, 40, 20, age, 20, 20, "wand", 40)
+        super(name, 40, 20, age, 20, 20, "wand", 40);
+        this.mana = 10;
+        this.healPrice = 2;
+        this.attackPrice = 1;
     }
 
     public void attack(Person person) {
@@ -26,6 +29,7 @@ public class Wizard extends Person{
 
     private int price(String action) {
         if (action == "heal") return healPrice;
+        else if (action == "attack") return attackPrice;
         return 0;
 
     }
