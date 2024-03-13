@@ -6,10 +6,10 @@ public class Robber extends Person {
     }
 
     public void attack(Person person) {
-        person.health -= this.power;
+        person.health -= super.power;
     }
 
     public void stealGold(int val) {
-        this.gold += val; 
+        super.gold += val; 
     }
 }
